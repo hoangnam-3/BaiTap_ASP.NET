@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.API\Demo.API.csproj" />
+    <ProjectReference Include="..\Demo.Models\Demo.Models.csproj" />
+  </ItemGroup>
+
+</Project>
