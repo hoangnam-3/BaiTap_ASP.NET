@@ -1,0 +1,12 @@
+D:\Practice_All\ASP_NET\a\Employee_Again\Employee.Models\bin\Debug\net5.0\Employee.Models.deps.json
+D:\Practice_All\ASP_NET\a\Employee_Again\Employee.Models\bin\Debug\net5.0\Employee.Models.dll
+D:\Practice_All\ASP_NET\a\Employee_Again\Employee.Models\bin\Debug\net5.0\ref\Employee.Models.dll
+D:\Practice_All\ASP_NET\a\Employee_Again\Employee.Models\bin\Debug\net5.0\Employee.Models.pdb
+D:\Practice_All\ASP_NET\a\Employee_Again\Employee.Models\obj\Debug\net5.0\Employee.Models.csproj.AssemblyReference.cache
+D:\Practice_All\ASP_NET\a\Employee_Again\Employee.Models\obj\Debug\net5.0\Employee.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Practice_All\ASP_NET\a\Employee_Again\Employee.Models\obj\Debug\net5.0\Employee.Models.AssemblyInfoInputs.cache
+D:\Practice_All\ASP_NET\a\Employee_Again\Employee.Models\obj\Debug\net5.0\Employee.Models.AssemblyInfo.cs
+D:\Practice_All\ASP_NET\a\Employee_Again\Employee.Models\obj\Debug\net5.0\Employee.Models.csproj.CoreCompileInputs.cache
+D:\Practice_All\ASP_NET\a\Employee_Again\Employee.Models\obj\Debug\net5.0\Employee.Models.dll
+D:\Practice_All\ASP_NET\a\Employee_Again\Employee.Models\obj\Debug\net5.0\ref\Employee.Models.dll
+D:\Practice_All\ASP_NET\a\Employee_Again\Employee.Models\obj\Debug\net5.0\Employee.Models.pdb
