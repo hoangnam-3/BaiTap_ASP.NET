@@ -1,0 +1,408 @@
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a, .btn-link {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.content {
+    /*padding-top: 1.1rem;*/
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+/*-----------------------------------------Custom/*-----------------------------------------*/
+
+.footer1 {
+    display: flex;
+    margin-top: 36px;
+    padding: 12px 0 32px 0;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 12px;
+    background-color: #fff;
+}
+
+.footer1 p {
+    margin-bottom: 5px;
+    width: 220px;
+}
+
+.footer1 a > img { /*Toàn bộ thẻ img trong thẻ a trong lớp .wrap-layout */
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: auto;
+    height: 80px;
+}
+
+.text-fontweight {
+    font-weight: bold;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.footer23 {
+    font-size: 12px;
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+}
+
+.footer23-e1 {
+    text-align: left;
+    width: 22%;
+}
+
+.footer23-e1 > a {
+    cursor: pointer;
+    line-height: 10px;
+}
+
+.footer23-e1 > p {
+    margin-bottom: 10px;
+    width: 60%; /* Rut gon vung cursor: point cua the <a>*/
+}
+
+.img-size {
+    width: 120px;
+    height: auto;
+    margin-right: 6px;
+    margin-top: 8px;
+}
+
+.footer23-e2 {
+    text-align: left;
+    width: 44%;
+    line-height: 15px;
+}
+
+.footer23-e2 > p {
+    max-width: 550px
+}
+
+.dangky {
+    display: flex;
+    width: 100%;
+}
+
+.input-dangky {
+    width: 50%;
+    height: 32px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 0;
+    padding-left: 10px;
+    font-size: 14px;
+    outline: none; /*Vien border khi nhap noi dung*/
+}
+
+.btn-dangky {
+    width: 18%;
+    height: auto;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    margin-left: 5px;
+    outline: none;
+    transition: .3s ease;
+    color: #fff;
+    font-size: 14px
+}
+
+.btn-dangky:hover {
+    background: rgba(255,144,0,1);
+    cursor: pointer;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.header-scroll {
+    position: fixed;
+    width: 100%;
+}
+
+.header-table {
+    background-color: red;
+    height: 64px;
+    display: flex;
+}
+
+.header-row {
+    padding-top: 11px;
+    display: flex;
+}
+
+.logo {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 70%;
+    margin-top: -2px;
+}
+
+.logo:hover {
+    color: #fff;
+}
+
+.search {
+    display: flex;
+    width: 100%;
+}
+
+.input-search {
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: 0;
+    height: 40px;
+    margin-left: 10px;
+    font-size: 14px;
+    padding-left: 15px;
+}
+.btn-market{
+    margin-left:10%;
+    height:40px;
+    border-radius:5px;
+    background-color:transparent;
+    border:0;
+}
+.btn-search {
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    margin-left: 10px;
+    background-color: #fff;
+    padding-top: 5px;
+    transition: .3s ease;
+}
+
+.btn-search:hover {
+    background: rgba(255,255,255,.95);
+}
+
+.btn-search:focus {
+    outline: 0;
+}
+svg:hover {
+    cursor: pointer;
+}
+
+.btn-giohang{
+    background-color:transparent;
+    height:40px;
+    width:auto;
+    margin-left:5%;
+    border:0;
+}
+.btn-giohang:focus {
+    outline:0;
+}
+.btn-signin {
+    width: 100px;
+    min-width: 100px;
+    height: 35px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 3px;
+    margin-left: 6%;
+    transition: .4s ease;
+}
+
+.btn-signin:hover {
+    background-color: rgba(255,255,255,.95);
+}
+.btn-signin:focus {
+    outline:0;
+}
+.menu {
+    background-color: red;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu > div {
+    width: 14.6666666666667%;
+}
+
+.menu > div:hover {
+    cursor: pointer;
+    transition: .4s ease;
+    background-color: rgba(238,38,36,.7);
+}
+
+.menu > div p {
+    text-overflow: ellipsis; /*Dau 3 cham*/
+    overflow: hidden; /*An khi bi thu hep kich thuoc*/
+    white-space: nowrap;/*K bi xuong dong*/
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.product-layout {
+    margin: 0 5%;
+    height: auto;
+}
+
+.product-card-layout {
+    padding-top: 120px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.product-card {
+    margin-top: 12px;
+    border-radius: 5px;
+    height: auto;
+    background-color: #fff;
+    width: 14.6666666666667%;
+    font-size: 14px;
+    font-family: Tahoma;
+}
+
+.product-card:hover {
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 40%), 0 -2px 2px 0 rgb(0 0 0 / 4%);
+    cursor: pointer;
+}
+
+.product-card > a div span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    white-space: pre-wrap;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;   
+    line-height: 20px;
+    
+}
+
+.btn1 {
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.btn2 {
+    height: 50px;
+    width: 250px;
+    text-align: center;
+    background: red;
+}
+
+.img1 {
+    height: 20px;
+    width: 50px;
+}
+
+.img2 {
+    height: 30px;
+    width: 30px;
+}
+
+.img3 {
+    padding-top: 110px;
+}
+
+.img4 {
+    padding-left: 50px;
+}
+
+.ID {
+    color: red;
+}
+
+.Text1 {
+    padding-top: 8px;
+}
+
+
+.default-image {
+    display: block;
+    width: 350px;
+    height: 350px;
+    background-image: url('/images/Cap1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.hovering {
+    display: block;
+    width: 350px;
+    height: 350px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('/images/Cap1.png');
+    transform: scale(2.0);
+}
+
+    .hovering:hover {
+        transition-delay: 1s;
+        transition-duration: 0s;
+        background-image: url('/images/Cap2.png');
+    }
+/*-----------------------------------------Custom/*-----------------------------------------*/
+

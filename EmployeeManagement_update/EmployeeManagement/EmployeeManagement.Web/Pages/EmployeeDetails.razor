@@ -1,0 +1,134 @@
+﻿@page "/employeedetails/{id}"
+@page "/employeedetails"
+@inherits EmployeeDetaislBase
+
+
+@{
+    var images = @"images";
+    var imgPath = @"images";
+}
+@if (Employee == null)
+{
+    <div class="spinner"> </div>
+}
+else
+{
+    <div class="header-scroll">
+        <div class="header-table">
+            <div class="header-row" style="width: 8%; ">
+                <a href="#" class="logo"><i>Sendo</i></a>
+            </div>
+            <div class="header-row" style="width: 75%;">
+                <div class="search">
+                    <button class="btn-market">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path d="M9 2a2 2 0 012 2v5a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2h5zm0 2H4v5h5V4zm11-2a2 2 0 012 2v5a2 2 0 01-2 2h-5a2 2 0 01-2-2V4a2 2 0 012-2h5zm0 2h-5v5h5V4zM9 13a2 2 0 012 2v5a2 2 0 01-2 2H4a2 2 0 01-2-2v-5a2 2 0 012-2h5zm0 2H4v5h5v-5zm8.5-2a4.5 4.5 0 110 9 4.5 4.5 0 010-9zm0 2a2.5 2.5 0 000 5 2.5 2.5 0 000-5z" fill="white" fill-rule="nonzero"></path>
+                            </svg>
+                        </a>
+                    </button>
+                    <input class="input-search" type="search" name="" placeholder="Tìm kiếm trên Sendo...">
+                    <button class="btn-search">
+                        <a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path d="M10 2a8 8 0 016.32 12.905l5.387 5.388-1.414 1.414-5.388-5.386A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z" fill="#6F787E" fill-rule="nonzero"></path>
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+            </div>
+            <div class="header-row" style="width: 17%;">
+                <button class="btn-giohang">
+                    <a href="#">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M20.946 2l.994 17.89a2 2 0 01-1.886 2.107l-.111.003H4.057a2 2 0 01-2-2c0-.055 0-.055.003-.11L3.054 2h17.892zm-1.892 2H4.946l-.889 16h15.886l-.889-16zM9 6v2.5c0 1.248 1.385 2.5 3 2.5s3-1.252 3-2.5V6h2v2.5c0 2.4-2.323 4.5-5 4.5s-5-2.1-5-4.5V6h2z" fill="#fff" fill-rule="nonzero"></path>
+                        </svg>
+                    </a>
+                </button>
+                <button class="btn-signin"><a href="#">Đăng nhập</a></button>
+            </div>
+        </div>
+     </div>
+
+    <div class="img3">
+        <div class="p-3 mb-2 bg-white text-dark">
+            <div class="row">
+                <div class="col-5">
+                    @code {
+                        bool _IsHovering = false;
+                        string _HoverImageCSSClass = "";
+
+                        protected void OnMouseOver(MouseEventArgs mouseEvent)
+                        {
+                            if (!_IsHovering)
+                            {
+                                _IsHovering = true;
+                                _HoverImageCSSClass = "hovering";
+                                StateHasChanged();
+                            }
+                        }
+
+                        protected void OnMouseOut(MouseEventArgs mouseEvent)
+                        {
+                            _HoverImageCSSClass = "";
+                            _IsHovering = false;
+                            StateHasChanged();
+                        }
+                    }
+                    <div class="card-body text-center $zindex-dropdown: 1000 !default; img4">
+                        <div class="default-image"
+                                @onmouseout="@OnMouseOut"
+                                @onmouseover="@OnMouseOver">
+                            <div class="@_HoverImageCSSClass">
+                                @*this will be used for the transformed image*@
+                                <img class="card-img-top" src="@Employee.PhotoPath" />
+                            </div>
+                        </div>
+                        <h4> </h4>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+                <div class="col-7">
+                    <br />
+                    <h4> <img class="img1" src="@images\shop.png" />@Employee.Description </h4>
+                    <br />
+                    <div class="ID"><b style="font-size:30px"> @($"{Employee.Price*plus}đ")</b></div>
+                    <br />
+                    <div>
+                        <div class="input-group mb-3">
+                            <label class="Text1"> <b>Chọn số lượng : </b>  &emsp; </label>
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary" @onclick="@BtnClick2" type="button" id="button-addon1"> - </button>
+                            </div>
+                            <div class="col-xs-2">
+                                <output type="text" class="form-control" placeholder="@plus" aria-label="Example text with button addon" aria-describedby="button-addon1"> @plus</output>
+                            </div>
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary" @onclick="@BtnClick1" type="button" id="button-addon1"> + </button>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <a class="btn btn-light btn1" href="#" role="button"> <b>Thêm Vào Giỏ Hàng</b></a>
+                    <a class="btn btn-light btn1" href="#" role="button"> <b>Mua Trước Trả Sau</b></a>
+                    <button type="button" class="btn btn-danger btn2"> <b>Mua Ngay</b></button>
+                    <br />
+                    <br />
+                    <hr />
+                    <br />
+                    <label><b> Quyền Lợi Khách Hàng</b></label>
+                    <br />
+                    <br />
+                    <img class="img2" src="@images\icon.jpg" />
+                    <label> 48 giờ hoàn trả</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        }

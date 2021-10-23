@@ -1,0 +1,167 @@
+﻿@page "/"
+@inherits EmployeeListBase
+
+@{
+    var imgPath = @"images";
+}
+
+<div class="header-scroll">
+    <div class="header-table">
+        <div class="header-row" style="width: 8%; ">
+            <a href="#" class="logo"><i>Sendo</i></a>
+        </div>
+        <div class="header-row" style="width: 75%;">
+            <div class="search">    
+                <button class="btn-market">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M9 2a2 2 0 012 2v5a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2h5zm0 2H4v5h5V4zm11-2a2 2 0 012 2v5a2 2 0 01-2 2h-5a2 2 0 01-2-2V4a2 2 0 012-2h5zm0 2h-5v5h5V4zM9 13a2 2 0 012 2v5a2 2 0 01-2 2H4a2 2 0 01-2-2v-5a2 2 0 012-2h5zm0 2H4v5h5v-5zm8.5-2a4.5 4.5 0 110 9 4.5 4.5 0 010-9zm0 2a2.5 2.5 0 000 5 2.5 2.5 0 000-5z" fill="white" fill-rule="nonzero"></path>
+                        </svg>
+                    </a>
+                </button>
+                <input class="input-search" type="search" name="" placeholder="Tìm kiếm trên Sendo...">
+                <button class="btn-search">
+                    <a href="#">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M10 2a8 8 0 016.32 12.905l5.387 5.388-1.414 1.414-5.388-5.386A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z" fill="#6F787E" fill-rule="nonzero"></path>
+                        </svg>
+                    </a>
+                </button>
+            </div>
+        </div>
+        <div class="header-row" style="width: 17%;">
+            <button class="btn-giohang">
+                <a href="#">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M20.946 2l.994 17.89a2 2 0 01-1.886 2.107l-.111.003H4.057a2 2 0 01-2-2c0-.055 0-.055.003-.11L3.054 2h17.892zm-1.892 2H4.946l-.889 16h15.886l-.889-16zM9 6v2.5c0 1.248 1.385 2.5 3 2.5s3-1.252 3-2.5V6h2v2.5c0 2.4-2.323 4.5-5 4.5s-5-2.1-5-4.5V6h2z" fill="#fff" fill-rule="nonzero"></path>
+                    </svg>
+                </a>
+            </button>
+            <button class="btn-signin"><a href="#">Đăng nhập</a></button>
+        </div>
+    </div>
+    <div class="menu">
+        <div><p>Cho bạn</p></div>
+        <div><p>Dùng cụ làm vườn</p></div>
+        <div><p>Các loại thực phẩm</p></div>
+        <div><p>Đồ dùng nhà bếp</p></div>
+        <div><p>Đồ uống</p></div>
+        <div><p>Bỉm, Tã, Vệ sinh</p></div>
+    </div>
+</div>
+@if (Employees != null) {
+    <div class="product-layout">
+        <div class="product-card-layout">
+            @foreach (var sanpham in Employees)
+            {
+
+                    <div class="product-card">
+                        <a href="@($"employeedetails/{sanpham.ProductId}")">
+                            <div style="padding-bottom: 5px;">
+                                <img src="@sanpham.PhotoPath" alt="" style="width: 100%; border-top-left-radius: 5px; border-top-right-radius:5px ">
+                            </div>
+                            <div style="height:40px; ">
+                                <span>@sanpham.Description</span>
+                            </div>
+                            <div>
+                                <span style="font-size:14px"><b>@($"{sanpham.Price}đ")</b></span>
+                            </div>
+                            <div >
+                                <span>Sale</span>
+                            </div>
+                            <div style="display: flex; padding-bottom: 5px ">
+                                <div style="width:50%">
+                                    <span>@sanpham.Address</span>
+                                </div>
+                                <div style="text-align:right; width:50%; ">
+                                    @{Random r = new Random();}
+                                    <span>Đã bán @r.Next(1,100)</span>
+                                </div>
+                            </div>
+                        </a>
+                     </div>
+                
+                    }
+            </div>
+    </div>
+}
+<div class="footer1">
+    <div>
+        <a href="#">
+            <img src="@imgPath\sieu1.png">
+            <p class="text-fontweight">Siêu nhiều hàng tốt</p>
+            <p>Cần gì cũng có 26 ngành hàng & 10 triệu sản phẩm</p>
+        </a>
+    </div>
+    <div>
+        <a href="#">
+            <img src="@imgPath\sieu2.png">
+            <p class="text-fontweight">Siêu yên tâm</p>
+            <p>Miễn phí đổi trả 48h</p>
+        </a>
+    </div>
+    <div>
+        <a href="#">
+            <img src="@imgPath\sieu3.png">
+            <p class="text-fontweight">Siêu tiện lợi</p>
+            <p>Mang thế giới mua sản phẩm của Sendo trong tầm tay bạn</p>
+        </a>
+    </div>
+    <div>
+        <a href="#">
+            <img src="@imgPath\sieu4.png">
+            <p class="text-fontweight">Siêu tiết kiệm</p>
+            <p>Giá hợp lý, vừa túi tiền. Luôn có nhiều chương trình khuyến mãi</p>
+        </a>
+    </div>
+</div>
+
+<div class="footer23">
+    <div class="footer23-e1">
+        <p class="text-fontweight"><span>VỀ CHÚNG TÔI</span></p>
+        <p><a href="#">Giới thiệu Sendo.vn</a></p>
+        <p><a href="#">Giới thiệu SenMall</a></p>
+        <p><a href="#">Quy chế hoạt động</a></p>
+    </div>
+    <div class="footer23-e1">
+        <p class="text-fontweight"><span>DÀNH CHO NGƯỜI MUA</span></p>
+        <p><a href="#">Giải quyết khiếu nại</a></p>
+        <p><a href="#">Hướng dẫn mua hàng</a></p>
+        <p><a href="#">Chính sách đổi trả</a></p>
+        <p><a href="#">Chăm sóc khách hàng</a></p>
+        <p><a href="#">Nạp tiền điện thoại</a></p>
+    </div>
+    <div class="footer23-e1">
+        <p class="text-fontweight"><span>DÀNH CHO NGƯỜI BÁN</span></p>
+        <p><a href="#">Quy định đối với người bán</a></p>
+        <p><a href="#">Chính sách bán hàng</a></p>
+        <p><a href="#">Hệ thống tiêu chí kiểm duyệt</a></p>
+        <p><a href="#">Mở shop trên Sendo</a></p>
+    </div>
+    <div class="footer23-e1">
+        <p class="text-fontweight"><span>TẢI ỨNG DỤNG SENDO</span></p>
+        <p>Mang thế giới mua sắm của Sendo trong tầm tay bạn</p>
+        <a href="#"><img class="img-size" src="@imgPath\appstore.png"></a>
+        <a href="#"><img class="img-size" src="@imgPath\googleplay.png"></a>
+        <a href="#"><img class="img-size" src="@imgPath\appgallery.png"></a>
+    </div>
+</div>
+<div class="footer23" style="background-color: #27343e">
+    <div class="footer23-e2" style="color: white;">
+        <p class="text-fontweight">Công ty Cổ phần Công nghệ Sen Đỏ, thành viên của Tập đoàn FPT</p>
+        <p>Số ĐKKD: 0312776486 - Ngày cấp: 13/05/2014, được sửa đổi lần thứ 6, ngày 23/05/2016.</p>
+        <p>Cơ quan cấp: Sở Kế hoạch và Đầu tư TPHCM.</p>
+        <p>Địa chỉ: Tầng 5, Tòa nhà A, Vườn Ươm Doanh Nghiệp, Lô D.01, Đường Tân Thuận, Khu chế xuất Tân Thuận, Phường Tân Thuận Đông, Quận 7, Thành phố Hồ Chí Minh, Việt Nam.</p>
+        <p>Email: lienhe@sendo.vn</p>
+        <a href="#"><img class="img-size" src="@imgPath\dadangky.png" /></a>
+        <a href="#"><img class="img-size" src="@imgPath\bocongthuong.png" /></a>
+    </div>
+    <div class="footer23-e2" style="color: #fff;">
+        <p class="text-fontweight">Đăng ký nhận bản tin ưu đãi khủng từ Sendo</p>
+        <div class="dangky">
+            <input class="input-dangky" type="search" name="" placeholder="Email của bạn là">
+            <button class="btn-dangky"><a href="#" style="color:#fff">Đăng ký</a></button>
+        </div>
+    </div>
+</div>
+
